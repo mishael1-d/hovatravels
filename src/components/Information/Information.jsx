@@ -5,8 +5,6 @@ import image1 from "../../assets/partners/airp.png";
 import image2 from "../../assets/partners/emirates.png";
 import image3 from "../../assets/partners/ibomair.png";
 import image4 from "../../assets/partners/jumeirah.png";
-import image5 from "../../assets/partners/emirates.png";
-import image6 from "../../assets/partners/ibomair.png";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -107,19 +105,25 @@ function Information() {
           </div>
           <div className="partners__container">
             <h5>Our Partners</h5>
-            <OwlCarousel className="owl-theme">
+            <OwlCarousel className="owl-theme" {...options}>
+              <div className="slide">
                 <img src={image1} alt="" />
                 <img src={image2} alt="" />
                 <img src={image3} alt="" />
                 <img src={image4} alt="" />
+              </div>
+              <div className="slide">
                 <img src={image1} alt="" />
                 <img src={image2} alt="" />
                 <img src={image3} alt="" />
                 <img src={image4} alt="" />
+              </div>
+              <div className="slide">
                 <img src={image1} alt="" />
                 <img src={image2} alt="" />
                 <img src={image3} alt="" />
                 <img src={image4} alt="" />
+              </div>
             </OwlCarousel>
           </div>
         </div>

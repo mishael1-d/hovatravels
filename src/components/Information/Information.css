@@ -42,7 +42,7 @@
     width: 30% !important;
 }
 
-.slide1 {
+.slide {
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -1,0 +1,118 @@
+.footer-section__wrapper {
+  background-color: #0e3c6e;
+}
+.footer-section__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: white !important;
+}
+.box1 .logo-wrapper img {
+  margin-bottom: 1.5rem;
+}
+.box1 p {
+  max-width: 300px;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  font-size: 14px;
+}
+.box1 button {
+  background: linear-gradient(180deg, #f17608 0%, #ee8d39 100%);
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.box2 ul {
+    list-style: none;
+}
+.box2 ul li {
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    margin-bottom: .5rem;
+}
+.box2 ul h5, .box3-t h5, .box3-b h5, .box4 h5 {
+    margin-bottom: .7rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.box3 {
+    max-width: 200px;
+}
+.box3-t .tags__container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.box3-t .tags {
+    border: 1px solid #fff;
+    padding: 10px;
+    font-size: 14px;
+    margin: .5rem .5rem .5rem 0;
+}
+
+.box3-b {
+    margin: 1rem 0;
+}
+.box3-b p {
+    margin-bottom: 1rem;
+    font-size: 14px;
+}
+
+.sm-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sm-links li {
+    cursor: pointer;
+}
+
+.news-container {
+    display: flex;
+    margin-bottom: 1.4rem;
+}
+.news-container img {
+    width: 55px;
+    height: 55px;
+    margin-right: .5rem;
+}
+.news-content p {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.news-content span {
+    font-size: 10px;
+    margin-top: .5rem;
+    color: #f17608;
+}
+
+.copyright {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #fff;
+}
+
+.flinks {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.flinks li {
+    margin-left: 1rem;
+}
+.flinks li a {
+    text-decoration: underline;
+    color: #fff;
+}

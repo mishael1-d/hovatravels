@@ -12,30 +12,30 @@ export default function BasicSelect() {
       <Select
         className="select-btn"
         classNamePrefix="select-dropdown"
+        defaultValue={options1[0]}
+        isSearchable={false}
+        name="Trip Type"
+        options={options1}
+      />
+      <Select
+        className="select-btn"
+        classNamePrefix="select-dropdown"
         defaultValue={options2[0]}
         isSearchable={false}
         name="Trip Type"
         options={options2}
       />
-      <Select
-        className="select-btn"
-        classNamePrefix="select-dropdown"
-        defaultValue={options3[0]}
-        isSearchable={false}
-        name="Trip Type"
-        options={options3}
-      />
     </div>
   );
 }
 
-const options2 = [
+const options1 = [
   { value: "Passenger", label: "Passenger" },
   { value: "ghana", label: "Ghana" },
   { value: "india", label: "India" },
   { value: "togo", label: "Togo" },
 ];
-const options3 = [
+const options2 = [
   { value: "Economy", label: "Economy" },
   { value: "premiuom economy", label: "Premiun Economy" },
   { value: "business", label: "Business" },
