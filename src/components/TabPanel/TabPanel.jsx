@@ -1,26 +1,23 @@
 import * as React from "react";
 import flightIcon from "../../assets/icons/flight.png";
 import hotelIcon from "../../assets/icons/hotel.png";
-import Checkbox from "./CheckboxInput/Checkbox";
 import InputField from "./FlightInputField/FlightInputField";
 import HotelInputField from "./HotelInputField/HotelInputField";
 import "./TabPanel.css";
 
 
-export const FirstTab = () => {
+export const FirstTab = ({activeTab}) => {
   return (
     <div className="firstTab">
-      {/* <BasicSelect /> */}
-      <InputField />
+      <InputField activeTab={activeTab}/>
       
     </div>
   );
 };
-export const SecondTab = () => {
+export const SecondTab = ({activeTab}) => {
   return (
     <div className="secondTab">
-      <Checkbox />
-      <HotelInputField/>
+      <HotelInputField activeTab={activeTab}/>
     </div>
   );
 };
@@ -57,7 +54,7 @@ function TabPanel() {
         </li>
       </ul>
       <div className="tab-content__container">
-        {activeTab === "tab1" ? <FirstTab /> : <SecondTab />}
+        {activeTab === "tab1" ? <FirstTab activeTab={activeTab}/> : <SecondTab activeTab={activeTab}/>}
       </div>
     </div>
   );

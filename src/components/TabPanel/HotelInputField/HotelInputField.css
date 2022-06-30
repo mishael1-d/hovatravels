@@ -1,34 +1,41 @@
-/* .inputField__container,
+ .hotelInputField__container,
 .hotelDate__container {
   display: flex;
 }
 
 .hotelSearchInput__container {
   display: flex;
-  width: 30%;
+  flex-direction: column;
+  width: 60%;
+  margin-right: 4rem;
 }
-.inputContainer {
+
+.hotelInputField__container-top {
+  display: flex;
+}
+
+.hotelInputContainer {
   border-radius: 5px;
   width: 100%;
 }
-.inputContainer,
-.dateContainer {
-  position: relative;
+
+.hotelInputContainer,
+.hotelDateContainer {
+position: relative;
   display: flex;
   flex-direction: column;
-  height: 64px;
-  
+  height: 60px;
   margin-bottom: 1.2rem;
   margin-right: 1rem;
   background-color: #fff;
 }
 
-.dateContainer {
+.hotelDateContainer {
     width: 50%;
 }
 
-.inputContainer label,
-.dateContainer label {
+.hotelInputContainer label,
+.hotelDateContainer label {
   position: absolute;
   top: 13px;
   left: 18px;
@@ -38,8 +45,8 @@
   color: #666666;
 }
 
-.inputContainer input,
-.dateContainer input {
+.hotelInputContainer input,
+.hotelDateContainer input {
   position: relative;
   top: 0;
   height: 64px;
@@ -55,6 +62,45 @@
   color: #000;
   text-transform: capitalize;
 }
+
+.hotelInput-buttons__container .submit-btn {
+  width: 100%;
+  margin-bottom: 1rem;
+  background: linear-gradient(180deg, #ff9639 0%, #f07100 100%);
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.hotelDate__container {
+  border-radius: 5px !important;
+  /* margin-right: 1rem; */
+}
+
+.hotelDate__container .departing {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.hotelDate__container .returning {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.hotelInput-buttons__container {
+  width: 25%;
+}
+
+.hotelInputField__container-bottom {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+/*
 
 
 .hotelRight__container {
