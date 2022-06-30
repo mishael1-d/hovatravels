@@ -1,0 +1,66 @@
+.app-banner__wrapper {
+    background-color: #0e3c6e;
+    height: 400px;
+}
+.app_advert_container {
+    display: flex;
+}
+.app_advert_container .advert_img {
+    margin-top: -157px;
+    margin-left: 0px;
+}
+.app-advert__content {
+    color: #fff;
+    margin-top: 50px;
+}
+.app-advert__content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+.app-advert__content p {
+    margin-bottom: 1rem;
+}
+.download-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.download-links p {
+    margin: 0 4rem;
+}
+
+.store-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.store-links img {
+    width: 70%;
+}
+
+.ios {
+    margin-bottom: 1rem;
+}
+
+.qr-code-link{
+    width: 100px;
+    height: 100px;
+}
+
+.qr-code-link img {
+    width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+    .app_advert_container .advert_img{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .app-banner__wrapper {
+        margin: 0;
+        padding: 0 2rem;
+    }
+}

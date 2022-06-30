@@ -29,11 +29,6 @@ export default function BasicSelect() {
   );
 }
 
-const options1 = [
-  { value: "round-trip", label: "Round Trip" },
-  { value: "one way", label: "One Way" },
-  { value: "multi city", label: "Multi City" },
-];
 const options2 = [
   { value: "Passenger", label: "Passenger" },
   { value: "ghana", label: "Ghana" },

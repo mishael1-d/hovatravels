@@ -2,9 +2,9 @@ import React from "react";
 import logo1 from "../../assets/logo/logo1.png";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import call from "../../assets/social/call.png";
-import whatsapp from "../../assets/social/Whatsapp.png";
-import mail from "../../assets/social/mail.png";
+// import call from "../../assets/social/call.png";
+// import whatsapp from "../../assets/social/Whatsapp.png";
+// import mail from "../../assets/social/mail.png";
 import flag from "../../assets/icons/flag.png";
 import dp from "../../assets/icons/dropdown.png"
 import menuBtn from "../../assets/icons/hamburger.png";

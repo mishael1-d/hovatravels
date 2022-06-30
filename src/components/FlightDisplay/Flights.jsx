@@ -82,7 +82,7 @@ function Flights() {
             <div className="location-overlay__container">
               <div className="location-overlay__content">
                 <div className="body">
-                  <h5>Airpeace</h5>
+                  <h5>Fly Emirates</h5>
                   <div>
                     <p className="location">
                       Lagos
@@ -118,7 +118,7 @@ function Flights() {
             <div className="location-overlay__container">
               <div className="location-overlay__content">
                 <div className="body">
-                  <h5>Airpeace</h5>
+                  <h5>Ibom Air</h5>
                   <div>
                     <p className="location">
                       Lagos
@@ -190,7 +190,7 @@ function Flights() {
             <div className="location-overlay__container">
               <div className="location-overlay__content">
                 <div className="body">
-                  <h5>Airpeace</h5>
+                  <h5>Ibom Air</h5>
                   <div>
                     <p className="location">
                       Lagos
@@ -226,7 +226,7 @@ function Flights() {
             <div className="location-overlay__container">
               <div className="location-overlay__content">
                 <div className="body">
-                  <h5>Airpeace</h5>
+                  <h5>Fly Emirates</h5>
                   <div>
                     <p className="location">
                       Lagos

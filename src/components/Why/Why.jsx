@@ -1,7 +1,7 @@
 import React from "react";
 import fingerprint from "../../assets/icons/fingerprint.png"
 import lcd from "../../assets/icons/Lcd.png"
-import multi from "../../assets/icons/Multiple \File.png"
+import multi from "../../assets/icons/Multiple File.png"
 import payment from "../../assets/icons/Payment.png"
 import './Why.css'
 
