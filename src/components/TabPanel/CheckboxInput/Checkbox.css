@@ -1,0 +1,38 @@
+.checkbox__container {
+    margin-bottom: 1rem;
+    display: flex;
+}
+
+.checkbox__container .content {
+    display: flex;
+}
+
+.checkbox__container .content span {
+    margin-right: 1rem;
+}
+
+.checkbox__container .content span label {
+    color: #fff;
+    font-weight: 400;
+}
+
+.checkbox__container .content span p, .checkbox__container .reason p {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.checkbox__container .reason {
+    margin-left: 2rem;
+}
+
+.checkbox__container .reason a {
+    text-decoration: underline;
+    color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+    .checkbox__container {
+        display: none;
+    }
+}

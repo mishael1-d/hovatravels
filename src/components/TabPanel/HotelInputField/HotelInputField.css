@@ -1,0 +1,168 @@
+/* .inputField__container,
+.hotelDate__container {
+  display: flex;
+}
+
+.hotelSearchInput__container {
+  display: flex;
+  width: 30%;
+}
+.inputContainer {
+  border-radius: 5px;
+  width: 100%;
+}
+.inputContainer,
+.dateContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 64px;
+  
+  margin-bottom: 1.2rem;
+  margin-right: 1rem;
+  background-color: #fff;
+}
+
+.dateContainer {
+    width: 50%;
+}
+
+.inputContainer label,
+.dateContainer label {
+  position: absolute;
+  top: 13px;
+  left: 18px;
+  z-index: 1;
+  font-size: 12px;
+  margin-bottom: 0.5rem;
+  color: #666666;
+}
+
+.inputContainer input,
+.dateContainer input {
+  position: relative;
+  top: 0;
+  height: 64px;
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-left: 18px;
+  padding-right: .5rem;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  text-transform: capitalize;
+}
+
+
+.hotelRight__container {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.hotelRight__container .dateContainer {
+  margin-right: 0;
+  border: 1px solid #ced4da;
+}
+
+.hotelDate__container {
+    width: 45%;
+  border-radius: 5px !important;
+  margin-right: 1rem;
+}
+
+.hotelDate__container .departing {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.hotelDate__container .returning {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.search-btn {
+  margin-bottom: 1rem;
+  background: linear-gradient(180deg, #ff9639 0%, #f07100 100%);
+  border-radius: 5px;
+}
+.search-btn button {
+  height: 100%;
+  color: #0e3c6e;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.hotelbottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.checkbox-input {
+  width: 20px;
+  height: 20px;
+  margin-right: .5rem;
+}
+
+.checkbox-input input {
+  width: 100%;
+  height: 100%;
+}
+
+.checkbox-input input[type="checkbox" i] {
+  background-color: transparent !important;
+}
+
+.checkbox_col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hotelbottom .bestValue p {
+  font-size: 14px;
+  color: #fff;
+  padding-right: 2.5rem;
+}
+
+.bestValue {
+  display: flex;
+  align-items: center;
+}
+.bestValue img {
+  margin-right: .5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .hotelSearchInput__container{
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .inputContainer {
+    margin-right: 0;
+  }
+  .inputContainer img {
+    left: 150px;
+    top: 50px;
+  }
+  .hotelRight__container {
+    flex-wrap: wrap;
+  }
+  .hotelDate__container {
+    width: 100%;
+  }
+  .hotelbottom .bestValue p {
+    padding: 0;
+  }
+} */

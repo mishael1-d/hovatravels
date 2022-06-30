@@ -1,8 +1,15 @@
 import React from 'react'
+import Flights from '../components/FlightDisplay/Flights'
+import Hero from '../components/HeroSection/Hero'
+import Why from '../components/Why/Why'
 
 function Home() {
   return (
-    <div>Home</div>
+    <>
+    <Hero/>
+    <Why />
+    <Flights/>
+    </>
   )
 }
 

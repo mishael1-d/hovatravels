@@ -1,0 +1,277 @@
+.inputField__container,
+.flightDate__container {
+  display: flex;
+}
+
+.flightSearchInput__container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-right: 4rem;
+}
+
+.inputField__container-top {
+  display: flex;
+}
+
+.inputContainer {
+  border-radius: 5px;
+  width: 60%;
+}
+.dateContainer {
+  width: 50%;
+}
+.inputContainer,
+.dateContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  margin-bottom: 1.2rem;
+  margin-right: 1rem;
+  background-color: #fff;
+}
+
+.inputContainer label,
+.dateContainer label {
+  position: absolute;
+  top: 13px;
+  left: 18px;
+  z-index: 1;
+  font-size: 12px;
+  margin-bottom: 0.5rem;
+  color: #666666;
+}
+
+.inputContainer input,
+.dateContainer input {
+  position: relative;
+  top: 0;
+  height: 64px;
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-left: 18px;
+  padding-right: 0.5rem;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  text-transform: capitalize;
+}
+
+.inputContainer img {
+  position: absolute;
+  right: -32px;
+  top: 6px;
+  z-index: 1;
+  height: 50px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.flightRight__container {
+  position: relative;
+  width: 100%;
+  /* border-radius: 5px; */
+}
+
+.flightRight__container .dateContainer {
+  margin-right: 0;
+  border: 1px solid #ced4da;
+}
+
+.flightDate__container {
+  border-radius: 5px !important;
+  margin-right: 1rem;
+}
+
+.flightDate__container .departing {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.flightDate__container .returning {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.search-btn {
+  width: 100%;
+  margin-bottom: 1rem;
+  background: linear-gradient(180deg, #ff9639 0%, #f07100 100%);
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 14px;
+}
+.bottom {
+  display: flex;
+  justify-content: space-between !important;
+  align-items: flex-end;
+}
+
+.checkbox-input {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+}
+
+.checkbox-input input {
+  width: 100%;
+  height: 100%;
+}
+
+.checkbox-input input[type="checkbox" i] {
+  background-color: transparent !important;
+}
+
+.checkbox_col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.bottom .checkbox_col p,
+.bottom .bestValue p {
+  font-size: 14px;
+  color: #fff;
+}
+
+.bestValue {
+  display: flex;
+  align-items: center;
+}
+.bestValue img {
+  margin-right: 0.8rem;
+}
+
+.inputField__container-bottom {
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+}
+
+.v-divider {
+  width: 1px;
+  height: 170px;
+  background: linear-gradient(180deg, #ff9639 0%, #f07100 100%);
+  margin-right: 4rem;
+}
+
+/* TOGGLE SWITCH STYLING */
+.switch-container {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.switch-container p {
+  margin-right: 1rem;
+}
+.toggle-switch {
+  width: 180px;
+  display: inline-block;
+  text-align: left;
+  top: 8px;
+}
+.checkbox {
+  display: none;
+}
+.label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0 solid #bbb;
+  border-radius: 20px;
+}
+.inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.inner:before,
+.inner:after {
+  float: left;
+  width: 50%;
+  height: 36px;
+  padding: 0;
+  line-height: 36px;
+  background: linear-gradient(180deg, #ff9639 0%, #f07100 100%);
+  color: #fff;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.inner:before {
+  content: "ROUND TRIP";
+  padding-left: 10px;
+  color: #fff;
+}
+.inner:after {
+  content: "1 WAY";
+  padding-right: 10px;
+  color: #fff;
+  text-align: right;
+}
+.switch {
+  display: none;
+  width: 24px;
+  margin: 5px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 40px;
+  border: 0 solid #bbb;
+  border-radius: 20px;
+  transition: all 0.3s ease-in 0s;
+}
+.checkbox:checked + .label .inner {
+  margin-left: 0;
+}
+.checkbox:checked + .label .switch {
+  right: 0px;
+}
+
+@media screen and (max-width: 1200px) {
+  .inputField__container {
+    flex-wrap: wrap;
+  }
+  .right {
+    width: 100%;
+  }
+  .flightRight__container {
+    justify-content: space-between;
+  }
+  .flightDate__container{
+    width: 100%;
+  }
+  .search-btn {
+    margin-right: 1rem;
+  }
+  .bottom {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .flightSearchInput__container{
+    flex-direction: column;
+  }
+  .flightRight__container {
+    flex-wrap: wrap;
+  }
+  .search-btn {
+    margin:  0;
+    height: 65px;
+    text-align: center;
+    width: 100%;
+  }
+}

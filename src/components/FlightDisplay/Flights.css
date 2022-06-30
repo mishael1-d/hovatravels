@@ -1,0 +1,176 @@
+.flight-wrapper {
+  background-color: #c6def8;
+  overflow: hidden;
+}
+.flight-wrapper .heading {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+.flight-wrapper .heading h3 {
+  margin-bottom: 1.4rem;
+}
+.flight-wrapper .heading img {
+  object-fit: cover;
+}
+.images__container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0;
+  row-gap: 0.5rem;
+  /* overflow-x: auto; */
+  scrollbar-width: 0;
+}
+.flight-wrapper figure {
+  margin-right: 1.05rem;
+  border-radius: 5px;
+}
+.flight-wrapper figure img {
+  border-radius: 10px 10px  0 0;
+  width: 200px;
+  object-fit: cover;
+}
+.owl-theme .owl-nav [class*="owl-"] {
+  margin: 0 !important;
+}
+.owl-next {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  top: 40%;
+  transform: translateY(-30%);
+  background-color: #fff !important;
+  color: #000 !important;
+  font-size: 28px !important;
+  border-radius: 50% !important;
+  outline: 0;
+  text-align: left;
+  right: -20px;
+  overflow: hidden;
+}
+.owl-next span,
+.owl-prev span {
+  padding: 0 22px !important;
+  text-align: center;
+  font-size: 2.5rem;
+}
+.owl-prev {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  top: 40%;
+  transform: translateY(-30%);
+  background-color: #fff !important;
+  color: #000 !important;
+  font-size: 28px !important;
+  border-radius: 50% !important;
+  outline: 0;
+  text-align: right;
+  left: -35px;
+}
+
+.location-overlay__container {
+  padding: 12px 22px;
+  background: #fff;
+  border-radius: 0 0 10px 10px;
+  position: relative;
+  top: -10px;
+}
+
+/* .paynow-overlay__container {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 24px 22px;
+} */
+
+.location-overlay__content,
+.paynow-overlay__content {
+  color: #000 !important;
+  display: flex;
+  align-items: center;
+}
+
+.location-overlay__content .body {
+  flex: 1;
+}
+.location-overlay__content .body h5,
+.paynow-overlay__content h5 {
+  font-size: 24px;
+  /* margin-bottom: 0.6rem; */
+}
+.location-overlay__content .location {
+  padding: 5px 10px;
+  display: block;
+  border-radius: 5px;
+  width: fit-content;
+  color: #000 !important;
+  background-color: #c6def8;
+  margin-bottom: 5px;
+  font-weight: 700;
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+}
+.location-overlay__content p {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: .5rem
+  ;
+}
+.location img {
+  width: 100% !important;
+}
+.location span {
+  margin-left: 1rem;
+}
+
+.airline-logo {
+  width: 30% !important;
+}
+
+.airline-logo img{
+  width: 100% !important;
+  object-fit: cover;
+}
+
+.paynow-overlay__content {
+  border: 1px solid #f17608;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.paynow-overlay__content .body1 {
+  padding: 5px 10px;
+}
+.pay-discount {
+  width: 50%;
+  height: 100%;
+}
+.pay-discount .body {
+  background: linear-gradient(180deg, #f17608 0%, #ee8d39 100%);
+  padding: 5px 10px;
+}
+.pay-discount .body p,
+.pay-discount .body h5 {
+  color: #000;
+}
+
+
+@media screen and (max-width: 600px) {
+  .flight-wrapper .heading {
+    padding: 1rem 2rem;
+    margin: 0;
+  }
+  .owl-carousel {
+    padding: 0 2rem;
+  }
+  .owl-nav {
+    display: none;
+  }
+}
