@@ -6,7 +6,7 @@ import call from "../../assets/social/call.png";
 import whatsapp from "../../assets/social/Whatsapp.png";
 import mail from "../../assets/social/mail.png";
 import flag from "../../assets/icons/flag.png";
-import dp from "../../assets/icons/dpdown.png"
+import dp from "../../assets/icons/dropdown.png"
 import menuBtn from "../../assets/icons/hamburger.png";
 
 function Navbar() {
@@ -29,6 +29,24 @@ function Navbar() {
         <li className="more-dropdown">
           <Link to="">More</Link>
           <img src={dp} alt="" className="" />
+          <div className="support-dropdown-content">
+            <div className="support-dropdown-item">
+            <img src={flag} alt="" className="support-item-img"/>
+          <span>NGN</span>
+            </div>
+            <div className="support-dropdown-item">
+              
+              <a href="https://api.whatsapp.com/send/07044040403">Home</a>
+            </div>
+            <div className="support-dropdown-item">
+             
+              <a href="mailto:support@hovapay.ng">Hovapay</a>
+            </div>
+            <div className="support-dropdown-item">
+             
+              <a href="mailto:support@hovapay.ng">Hovasms</a>
+            </div>
+          </div>
         </li>
       </ul>
 

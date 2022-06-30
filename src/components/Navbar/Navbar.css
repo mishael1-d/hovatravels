@@ -44,7 +44,15 @@
     height: 100%;
     object-fit: cover;
 }
-.support-dropdown {
+.more-dropdown {
+    cursor: pointer;
+}
+
+.more-dropdown a {
+    margin-right: 5px;
+}
+
+.more-dropdown, .support-dropdown {
     position: relative;
 }
 .support-dropdown-content {
@@ -75,10 +83,11 @@
 .support-dropdown-content a {
     text-decoration: none;
     color: #111;
-    padding: 10px 0;
+    padding: 3px 0;
     display: block;
 }
-
+.more-dropdown:hover .support-dropdown-content,
+.more-dropdown:active .support-dropdown-content,
 .support-dropdown:hover .support-dropdown-content,
 .support-dropdown:active .support-dropdown-content
 
