@@ -73,7 +73,7 @@ function Navbar() {
           <img src={flag} alt="" />
           <span>NGN</span>
         </li> */}
-        <li>Help</li>
+        <li className="help">Help</li>
         <li className="manage">Manage My Booking</li>
         <div className="btn-container">
             <button className="login">Login</button>

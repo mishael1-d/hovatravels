@@ -137,24 +137,28 @@
     .navbar-left-links__container {
         display: none !important;
     }
-    .currency, .manage {
+    .currency, .manage, .help, .btn-container {
         display: none;
     }
     .hamburger-menu {
         display: block;
     }
+    .logo__container {
+       margin: 0;
+       width: 30%;
+    }
 }
 
 @media screen and (max-width: 600px) {
- .navbar__container {
+    .navbar__container {
     padding: 2rem ;
     align-items: flex-end;
- }
- .logo__container {
-    margin: 0;
-    width: 100%;
- }
- .navbar-left-side__container{
+}
+.navbar-left-side__container{
     width: 40%;
- }
+}
+.logo__container {
+   margin: 0;
+   width: 50%;
+}
 }
