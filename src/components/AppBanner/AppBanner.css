@@ -63,4 +63,10 @@
         margin: 0;
         padding: 0 2rem;
     }
+    .download-links p {
+        display: none;
+    }
+    .qr-code-link {
+        display: none;
+    }
 }

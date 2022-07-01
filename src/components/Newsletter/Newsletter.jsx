@@ -1,5 +1,5 @@
 import React from "react";
-import send from '../../assets/icons/send.png'
+import send from '../../assets/icons/send1.png'
 import "./Newsletter.css";
 
 function Newsletter() {

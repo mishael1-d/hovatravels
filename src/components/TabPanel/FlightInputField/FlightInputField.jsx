@@ -58,6 +58,7 @@ export default function InputField({ suggestions, activeTab }) {
   return (
     <div className="inputField__container">
       <div className="flightSearchInput__container">
+        {window.innerWidth <= "1200" &&<ToggleSwitch />}
         <div className="inputField__container-top">
           <div className="inputContainer">
             <label htmlFor="from" className="input-label">
@@ -115,7 +116,7 @@ export default function InputField({ suggestions, activeTab }) {
       </div>
       <div className="v-divider" />
       <div className="input-buttons__container">
-        <ToggleSwitch />
+      {window.innerWidth > "1200" &&<ToggleSwitch />}
         <BasicSelect activeTab={activeTab} />
         <button className="search-btn">Search Flights</button>
       </div>
@@ -124,20 +125,18 @@ export default function InputField({ suggestions, activeTab }) {
 }
 
 export const ToggleSwitch = () => {
+  const [toggle, setToggle] = useState(false)
+  const handleSwitchChange = () => {
+    setToggle(!toggle)
+  }
   return (
     <div className="switch-container">
-      <p>Trip Type</p>
+      <h5>Trip Type</h5>
       <div className="toggle-switch">
-        <input
-          type="checkbox"
-          className="checkbox"
-          name="tripType"
-          id="tripType"
-        />
-        <label className="label" htmlFor="tripType">
-          <span className="inner" />
-          <span className="switch" />
-        </label>
+        <div className="switch-btn" onClick={handleSwitchChange}>
+          <p className={!toggle ?"active-switch":""}>ROUND TRIP</p>
+          <p className={toggle ?"active-switch":""}>1 WAY</p>
+        </div>
       </div>
     </div>
   );

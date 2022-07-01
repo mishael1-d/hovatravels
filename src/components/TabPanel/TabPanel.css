@@ -70,7 +70,7 @@
   margin-right: 12px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
   .tabpanel__container ul.tab-nav__container{
     width: 100%;
   }
@@ -82,8 +82,8 @@
     margin-right: 0;
   }
   .tab-content__container {
-    background: none;
     opacity: 1;
+    padding: 2rem;
   }
   .tab2-content__container {
     background: none;

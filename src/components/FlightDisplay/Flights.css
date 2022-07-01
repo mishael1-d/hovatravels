@@ -158,7 +158,7 @@
 }
 .pay-discount .body p,
 .pay-discount .body h5 {
-  color: #000;
+  color: #fff;
 }
 
 
@@ -170,7 +170,18 @@
   .owl-carousel {
     padding: 0 2rem;
   }
-  .owl-nav {
-    display: none;
+  .owl-next, .owl-prev {
+    width: 40px;
+    height: 40px;
+  }
+  .owl-next span, .owl-prev span {
+    padding: 0px 15px !important;
+    font-size: 2rem;
+  }
+  .owl-next {
+    right: 28px;
+  }
+  .owl-prev {
+   left: 10px; 
   }
 }

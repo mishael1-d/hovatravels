@@ -116,3 +116,16 @@
     text-decoration: underline;
     color: #fff;
 }
+
+@media screen and (max-width: 1200px) {
+    .footer-section__container{
+        flex-direction: column;
+        padding: 2rem;
+    }
+    .copyright {
+        flex-direction: column;
+    }
+    .flinks {
+        margin: 1rem 0;
+    }
+}

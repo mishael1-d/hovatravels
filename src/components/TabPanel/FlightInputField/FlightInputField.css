@@ -169,78 +169,45 @@
 
 /* TOGGLE SWITCH STYLING */
 .switch-container {
-  text-align: center;
   display: flex;
   align-items: center;
   color: #fff;
   margin-bottom: 10px;
 }
-.switch-container p {
+.switch-container h5 {
   margin-right: 1rem;
 }
+
 .toggle-switch {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   width: 180px;
-  display: inline-block;
-  text-align: left;
-  top: 8px;
-}
-.checkbox {
-  display: none;
-}
-.label {
-  display: block;
-  overflow: hidden;
-  cursor: pointer;
-  border: 0 solid #bbb;
-  border-radius: 20px;
-}
-.inner {
-  display: block;
-  width: 200%;
-  margin-left: -100%;
-  transition: margin 0.3s ease-in 0s;
-}
-.inner:before,
-.inner:after {
-  float: left;
-  width: 50%;
-  height: 36px;
-  padding: 0;
-  line-height: 36px;
+  height: 42px;
   background: linear-gradient(180deg, #ff9639 0%, #f07100 100%);
-  color: #fff;
-  font-weight: bold;
-  box-sizing: border-box;
+  border-radius: 50px;
+  padding: 8px;
+  font-size: 14px;
+  margin-left: -5px;
 }
-.inner:before {
-  content: "ROUND TRIP";
-  padding-left: 10px;
-  color: #fff;
+
+.switch-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all .5s ease;
+  cursor: pointer;
 }
-.inner:after {
-  content: "1 WAY";
-  padding-right: 10px;
-  color: #fff;
-  text-align: right;
-}
-.switch {
-  display: none;
-  width: 24px;
-  margin: 5px;
+
+.active-switch {
+  transition: all .5s ease;
+  width: fit-content;
   background: #fff;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 40px;
-  border: 0 solid #bbb;
-  border-radius: 20px;
-  transition: all 0.3s ease-in 0s;
-}
-.checkbox:checked + .label .inner {
-  margin-left: 0;
-}
-.checkbox:checked + .label .switch {
-  right: 0px;
+  color: #f07100;
+  border-radius: 25px;
+  padding: 6px;
 }
 
 .no-suggestions {
@@ -276,9 +243,28 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .inputField__container-top{
+    flex-direction: column;
+  }
+
+  .inputContainer {
+    width: 100%;
+    margin-right: 0 !important;
+  }
+  .dateContainer{
+    width: 50%;
+    margin-right: 0 !important;
+  }
+
   .inputField__container {
     flex-wrap: wrap;
   }
+
+  .inputContainer img {
+    left: 42%;
+    top: 79%;
+  }
+
   .right {
     width: 100%;
   }
@@ -294,11 +280,19 @@
   .bottom {
     display: none;
   }
+  .inputField__container-bottom, .v-divider {
+    display: none;
+  }
+  .input-buttons__container {
+    width: 100%;
+  }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
   .flightSearchInput__container{
     flex-direction: column;
+    width: 100%;
+    margin-right: 0 !important;
   }
   .flightRight__container {
     flex-wrap: wrap;

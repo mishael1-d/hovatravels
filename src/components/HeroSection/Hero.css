@@ -51,9 +51,11 @@
 @media screen and (max-width: 1200px) {
   .hero-wrapper {
     height: 95%;
+    margin-bottom: 0;
   }
-}
-@media screen and (max-width: 600px) {
+  .tabpanel__container {
+    top: 0;
+  }
   .hero-wrapper {
     height: 50%;
   }
@@ -73,4 +75,6 @@
   .hero-section__container {
     top: 0;
   }
+}
+@media screen and (max-width: 600px) {
 }

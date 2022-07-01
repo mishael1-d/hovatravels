@@ -16,9 +16,7 @@
     margin: 0 auto;
     padding: 4rem;
   }
-  #root input {
-    margin-right: .5rem !important;
-  }
+  
   
   @media screen and (max-width: 1024px) {
     .container {

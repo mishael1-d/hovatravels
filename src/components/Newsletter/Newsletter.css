@@ -80,6 +80,9 @@
 
 
 @media screen and (max-width: 600px) {
+  .newsletter__wrapper {
+    padding: 3rem;
+  }
   .newsletter__container {
     border-radius: 0;
   }
@@ -88,11 +91,13 @@
   }
   .form__container input {
     margin-left: 0;
+    margin-bottom: .5rem;
   }
   .form__container button {
     left: 0;
     top: 0;
     max-width: 100%;
-    width: 75%;
+    width: 85%;
+    justify-content: center;
   }
 }

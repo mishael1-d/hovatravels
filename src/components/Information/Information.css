@@ -47,3 +47,15 @@
     justify-content: space-between;
     align-items: center;
 }
+
+@media screen and (max-width: 1200px) {
+    .info-section__wrapper .container {
+        padding: 4rem 2rem;
+    }
+    .info-section-content-text{
+        width: 100%;
+    }
+    .info-section-content {
+        flex-direction: column;
+    }
+}

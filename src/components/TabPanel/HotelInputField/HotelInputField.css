@@ -65,6 +65,7 @@ position: relative;
 
 .tab2-search-btn {
   background: #0e3c6e !important;
+  height: 64px;
 }
 .hotelInput-buttons__container .submit-btn {
   width: 100%;
@@ -197,29 +198,35 @@ position: relative;
 .bestValue img {
   margin-right: .5rem;
 }
-
+*/
 @media screen and (max-width: 1200px) {
   .hotelSearchInput__container{
     width: 100%;
   }
-
+  .hotelInputField__container, .hotelDate__container {
+    flex-direction: column;
+  }
+.hotelInputContainer, .hotelDateContainer {
+  margin-right: 0!important;
+}
+.tab2-v-divider,.hotelInputField__container-bottom {
+  display: none;
+}
+.hotelInput-buttons__container, .hotelDateContainer {
+  width: 100%;
+}
+.hotelInput-buttons__container .select-btn {
+  display: none;
+}
+.hotelInput-buttons__container .dropdown__wrapper {
+  width: 100%;
+  margin: 0 !important;
+}
+.hotelInput-buttons__container .dropdown__wrapper .tab2-dropdown__container{
+  margin-left: 0 !important;
+}
 }
 
 @media screen and (max-width: 600px) {
-  .inputContainer {
-    margin-right: 0;
-  }
-  .inputContainer img {
-    left: 150px;
-    top: 50px;
-  }
-  .hotelRight__container {
-    flex-wrap: wrap;
-  }
-  .hotelDate__container {
-    width: 100%;
-  }
-  .hotelbottom .bestValue p {
-    padding: 0;
-  }
-} */
+  
+}
