@@ -47,7 +47,6 @@ function TabPanel() {
     <div className="tabpanel__container">
       <ul className="tab-nav__container">
         <li
-          className={activeTab === "tab1" ? "active" : ""}
           onClick={handleTab1}
         >
           <div className="tab-title">
@@ -56,16 +55,16 @@ function TabPanel() {
           </div>
         </li>
         <li
-          className={activeTab === "tab2" ? "active" : ""}
+        className="tab2-title"
           onClick={handleTab2}
         >
-          <div className="tab-title">
+          <div className="tab-title ">
             <img src={hotelIcon} alt="" />
             <p>Find Hotels</p>
           </div>
         </li>
       </ul>
-      <div className="tab-content__container">
+      <div className={activeTab === "tab1" ? "tab-content__container" : "tab-content__container tab2-content__container"}>
         {activeTab === "tab1" ? (
           <FirstTab activeTab={activeTab} />
         ) : (

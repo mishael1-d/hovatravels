@@ -4,7 +4,7 @@ import bestvalue from "../../../assets/icons/bestvalue.png";
 import "./FlightInputField.css";
 import BasicSelect from "../Dropdown/Dropdowns";
 
-export default function InputField({ suggestions }) {
+export default function InputField({ suggestions, activeTab }) {
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
   const [activeSuggestionIndex, setActiveSuggestionIndex] = useState(0);
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -116,7 +116,7 @@ export default function InputField({ suggestions }) {
       <div className="v-divider" />
       <div className="input-buttons__container">
         <ToggleSwitch />
-        <BasicSelect />
+        <BasicSelect activeTab={activeTab} />
         <button className="search-btn">Search Flights</button>
       </div>
     </div>

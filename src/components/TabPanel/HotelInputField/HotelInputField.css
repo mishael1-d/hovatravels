@@ -63,8 +63,12 @@ position: relative;
   text-transform: capitalize;
 }
 
+.tab2-search-btn {
+  background: #0e3c6e !important;
+}
 .hotelInput-buttons__container .submit-btn {
   width: 100%;
+  height: 64px !important;
   margin-bottom: 1rem;
   background: linear-gradient(180deg, #ff9639 0%, #f07100 100%);
   border-radius: 5px;
@@ -98,6 +102,13 @@ position: relative;
 .hotelInputField__container-bottom {
   color: white;
   margin-bottom: 1rem;
+}
+
+.tab2-v-divider {
+  width: 1px;
+  height: 170px;
+  background: #0e3c6e;
+  margin-right: 4rem;
 }
 
 /*

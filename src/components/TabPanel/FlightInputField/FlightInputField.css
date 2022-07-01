@@ -110,6 +110,8 @@
   padding: 10px;
   font-size: 14px;
 }
+
+
 .bottom {
   display: flex;
   justify-content: space-between !important;

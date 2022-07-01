@@ -3,7 +3,7 @@ import bestvalue from "../../../assets/icons/bestvalue.png";
 import "./HotelInputField.css";
 import BasicSelect from "../Dropdown/Dropdowns";
 
-function HotelInputField() {
+function HotelInputField({activeTab}) {
   return (
     <div className="hotelInputField__container">
       <div className="hotelSearchInput__container">
@@ -45,10 +45,10 @@ function HotelInputField() {
           </div>
         </div>
       </div>
-      <div className="v-divider" />
+      <div className={activeTab === "tab2" && "tab2-v-divider"} />
       <div className="hotelInput-buttons__container">
-        <BasicSelect />
-        <button className="search-btn">Search Hotels</button>
+        <BasicSelect activeTab={activeTab}/>
+        <button className={activeTab === "tab2" ? "search-btn tab2-search-btn": "search-btn"}>Search Hotels</button>
       </div>
     </div>
   );

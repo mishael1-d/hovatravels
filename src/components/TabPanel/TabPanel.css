@@ -31,6 +31,10 @@
   font-weight: 500;
   white-space: nowrap;
   vertical-align: middle;
+  background: #0e3c6e;
+}
+
+.tabpanel__container ul.tab-nav__container .tab2-title {
   background: linear-gradient(180deg, #ff9639 0%, #f07100 100%);
 }
 
@@ -51,9 +55,7 @@
   min-height: 80%;
 }
 .tab2-content__container {
-  background: linear-gradient(180deg, #ff9639 0%, #f07100 100%);
-  padding: 2rem 2rem 0;
-  min-height: 80%;
+  background: linear-gradient(180deg, #ff9639 0%, #f07100 100%) !important;
 }
 
 
