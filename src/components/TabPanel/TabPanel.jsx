@@ -5,19 +5,31 @@ import InputField from "./FlightInputField/FlightInputField";
 import HotelInputField from "./HotelInputField/HotelInputField";
 import "./TabPanel.css";
 
-
-export const FirstTab = ({activeTab}) => {
+export const FirstTab = ({ activeTab }) => {
   return (
     <div className="firstTab">
-      <InputField activeTab={activeTab}/>
-      
+      <InputField
+        activeTab={activeTab}
+        suggestions={[
+          "Alligator",
+          "Bask",
+          "Crocodilian",
+          "Death Roll",
+          "Eggs",
+          "Jaws",
+          "Reptile",
+          "Solitary",
+          "Tail",
+          "Wetlands",
+        ]}
+      />
     </div>
   );
 };
-export const SecondTab = ({activeTab}) => {
+export const SecondTab = ({ activeTab }) => {
   return (
     <div className="secondTab">
-      <HotelInputField activeTab={activeTab}/>
+      <HotelInputField activeTab={activeTab} />
     </div>
   );
 };
@@ -54,7 +66,11 @@ function TabPanel() {
         </li>
       </ul>
       <div className="tab-content__container">
-        {activeTab === "tab1" ? <FirstTab activeTab={activeTab}/> : <SecondTab activeTab={activeTab}/>}
+        {activeTab === "tab1" ? (
+          <FirstTab activeTab={activeTab} />
+        ) : (
+          <SecondTab activeTab={activeTab} />
+        )}
       </div>
     </div>
   );
