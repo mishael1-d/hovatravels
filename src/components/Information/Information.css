@@ -38,6 +38,10 @@
     margin-top: 4rem;
 }
 
+.partners__container .owl-theme {
+    align-items: center !important;
+}
+
 .partners__container .owl-theme img {
     width: 30% !important;
 }

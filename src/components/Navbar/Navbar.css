@@ -137,7 +137,7 @@
     .navbar-left-links__container {
         display: none !important;
     }
-    .currency, .manage, .help, .btn-container {
+    .currency, .manage, .btn-container {
         display: none;
     }
     .hamburger-menu {

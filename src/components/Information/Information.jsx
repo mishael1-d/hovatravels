@@ -21,10 +21,10 @@ const options = {
       items: 1,
     },
     600: {
-      items: 1,
+      items: 2,
     },
     1000: {
-      items: 2,
+      items: 4,
     },
   },
 };
@@ -108,20 +108,28 @@ function Information() {
             <OwlCarousel className="owl-theme" {...options}>
               <div className="slide">
                 <img src={image1} alt="" />
+              </div>
+              <div className="slide">
                 <img src={image2} alt="" />
+                
+              </div>
+              <div className="slide">
                 <img src={image3} alt="" />
+              </div>
+              <div className="slide">
                 <img src={image4} alt="" />
               </div>
               <div className="slide">
                 <img src={image1} alt="" />
-                <img src={image2} alt="" />
-                <img src={image3} alt="" />
-                <img src={image4} alt="" />
               </div>
               <div className="slide">
-                <img src={image1} alt="" />
                 <img src={image2} alt="" />
+                
+              </div>
+              <div className="slide">
                 <img src={image3} alt="" />
+              </div>
+              <div className="slide">
                 <img src={image4} alt="" />
               </div>
             </OwlCarousel>

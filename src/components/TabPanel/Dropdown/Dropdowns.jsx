@@ -6,28 +6,40 @@ import "./Dropdowns.css";
 export default function BasicSelect({ activeTab }) {
   const [showPassengerDropdown, setShowPassengerDropdown] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
-  const [count, setCount] = useState(1);
-  const [passengerCount, setPassengerCount] = useState({
-    adult: 1,
-    children: 1,
-    infant: 1,
-  });
+  const [adult, setAdult] = useState(1);
+  const [children, setChildren] = useState(1);
+  const [infant, setInfant] = useState(1);
+  const [count, setCount] = useState(adult + children + infant);
 
-  const handleIncrement = (e) => {
-    setPassengerCount({ ...passengerCount, adult: +1 });
+  const handleIncrement = () => {
+    setAdult((adult) => adult + 1);
     setCount((count) => count + 1);
   };
-  const handleDecrement = (e) => {
+  const handleChidrenIncrement = () => {
+    setChildren((children) => children + 1);
+    setCount((count) => count + 1);
+  };
+  const handleInfantIncrement = () => {
+    setInfant((infant) => infant + 1);
+    setCount((count) => count + 1);
+  };
+  const handleDecrement = () => {
     if (count > 0) {
+      setAdult((adult) => adult - 1);
       setCount((count) => count - 1);
     }
   };
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setPassengerCount({ ...passengerCount, [name]: value });
-
-    setCount((count) => count + parseInt(value));
+  const handleChildrenDecrement = () => {
+    if (count > 0) {
+      setChildren((children) => children - 1);
+      setCount((count) => count - 1);
+    }
+  };
+  const handleInfantDecrement = () => {
+    if (count > 0) {
+      setInfant((infant) => infant - 1);
+      setCount((count) => count - 1);
+    }
   };
 
   const handleDropdown = () => {
@@ -50,10 +62,16 @@ export default function BasicSelect({ activeTab }) {
           {showPassengerDropdown && (
             <Passenger
               increment={handleIncrement}
+              handleChidrenIncrement={handleChidrenIncrement}
+              handleInfantIncrement={handleInfantIncrement}
               handleDecrement={handleDecrement}
-              passengerCount={passengerCount}
-              handleChange={handleChange}
+              handleChildrenDecrement={handleChildrenDecrement}
+              handleInfantDecrement={handleInfantDecrement}
+              adult={adult}
+              children={children}
+              infant={infant}
               activeTab={activeTab}
+              setShowPassengerDropdown={setShowPassengerDropdown}
             />
           )}
           <Select
@@ -88,8 +106,11 @@ export default function BasicSelect({ activeTab }) {
             <Passenger
               increment={handleIncrement}
               handleDecrement={handleDecrement}
-              passengerCount={passengerCount}
-              handleChange={handleChange}
+              handleChidrenIncrement={handleChidrenIncrement}
+              handleInfantIncrement={handleInfantIncrement}
+              adult={adult}
+              children={children}
+              infant={infant}
               activeTab={activeTab}
             />
           )}
@@ -115,14 +136,17 @@ const options3 = [
 ];
 export const Passenger = ({
   increment,
+  handleChidrenIncrement,
+  handleInfantIncrement,
   handleDecrement,
-  passengerCount,
-  handleChange,
+  handleChildrenDecrement,
+  handleInfantDecrement,
   activeTab,
+  adult,
+  children,
+  infant,
+  setShowPassengerDropdown
 }) => {
-  // const handleIncrement = ()=>{
-
-  // }
   return (
     <div
       className={
@@ -140,13 +164,12 @@ export const Passenger = ({
             <button className="decrease" name="adult" onClick={handleDecrement}>
               -
             </button>
-            <input
-              type="text"
-              value={passengerCount.adult}
-              name="adult"
-              onChange={handleChange}
-            />
-            <button className="increase" name="adult" onClick={increment}>
+            <input type="text" />
+            <button
+              className="increase"
+              name="rooms"
+              onClick={(e) => increment(e)}
+            >
               +
             </button>
           </div>
@@ -161,12 +184,7 @@ export const Passenger = ({
           <button className="decrease" name="adult" onClick={handleDecrement}>
             -
           </button>
-          <input
-            type="text"
-            value={passengerCount.adult}
-            name="adult"
-            onChange={handleChange}
-          />
+          <input type="text" name="adult" value={adult} />
           <button className="increase" name="adult" onClick={increment}>
             +
           </button>
@@ -178,11 +196,19 @@ export const Passenger = ({
           <p>2 - 12years</p>
         </div>
         <div className="item-btns">
-          <button className="decrease" name="adult" onClick={handleDecrement}>
+          <button
+            className="decrease"
+            name="adult"
+            onClick={handleChildrenDecrement}
+          >
             -
           </button>
-          <p>{passengerCount.children}</p>
-          <button className="increase" name="children" onClick={increment}>
+          <input type="text" name="children" value={children} />
+          <button
+            className="increase"
+            name="children"
+            onClick={handleChidrenIncrement}
+          >
             +
           </button>
         </div>
@@ -193,16 +219,24 @@ export const Passenger = ({
           <p>{"<"} 2years</p>
         </div>
         <div className="item-btns">
-          <button className="decrease" name="adult" onClick={handleDecrement}>
+          <button
+            className="decrease"
+            name="adult"
+            onClick={handleInfantDecrement}
+          >
             -
           </button>
-          <p>{passengerCount.infant}</p>
-          <button className="increase" name="infant" onClick={increment}>
+          <input type="text" name="infant" value={infant} />
+          <button
+            className="increase"
+            name="infant"
+            onClick={handleInfantIncrement}
+          >
             +
           </button>
         </div>
       </div>
-      <button className="done">Done</button>
+      <button className="done" onClick={()=>setShowPassengerDropdown(false)}>Done</button>
     </div>
   );
 };
