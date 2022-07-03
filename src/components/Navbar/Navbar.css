@@ -142,7 +142,45 @@
     }
     .hamburger-menu {
         display: block;
+        cursor: pointer;
     }
+    .menu {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        /* left: 0; */
+        right: 0;
+        background-color: #fff;
+        color: #111;
+        text-align: right;
+        width: 100%;
+        height: 100vh;
+        padding: 2rem;
+    }
+    .m-nav__container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start !important;
+        width: 100%;
+        text-align: left;
+    }
+    .m-nav__container li {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+        font-size: 14px;
+        width: 100%;
+    }
+    .m-nav-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .close-btn {
+        padding: 1rem;
+        width: 15%;
+    }
+
     .logo__container {
        margin: 0;
        width: 30%;

@@ -11,16 +11,26 @@ export const FirstTab = ({ activeTab }) => {
       <InputField
         activeTab={activeTab}
         suggestions={[
-          "Alligator",
-          "Bask",
-          "Crocodilian",
-          "Death Roll",
-          "Eggs",
-          "Jaws",
-          "Reptile",
-          "Solitary",
-          "Tail",
-          "Wetlands",
+          "Lagos",
+          "Abuja",
+          "Delta",
+          "Kano",
+          "Calabar",
+          "Uyo",
+          "Owerri",
+          "Minna",
+          "Jos",
+        ]}
+        toSuggestions={[
+          "Lagos",
+          "Abuja",
+          "Delta",
+          "Kano",
+          "Calabar",
+          "Uyo",
+          "Owerri",
+          "Minna",
+          "Jos",
         ]}
       />
     </div>

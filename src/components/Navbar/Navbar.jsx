@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo1 from "../../assets/logo/logo1.png";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
@@ -6,10 +6,12 @@ import { Link } from "react-router-dom";
 // import whatsapp from "../../assets/social/Whatsapp.png";
 // import mail from "../../assets/social/mail.png";
 import flag from "../../assets/icons/flag.png";
-import dp from "../../assets/icons/dropdown.png"
+import dp from "../../assets/icons/dropdown.png";
 import menuBtn from "../../assets/icons/hamburger.png";
+import closeBtn from "../../assets/icons/close-btn.png";
 
 function Navbar() {
+  const [openMenu, setOpenMenu] = useState(false);
   return (
     // =============Navigattion bar container=====================//
     <div className="navbar__container">
@@ -31,19 +33,16 @@ function Navbar() {
           <img src={dp} alt="" className="" />
           <div className="support-dropdown-content">
             <div className="support-dropdown-item">
-            <img src={flag} alt="" className="support-item-img"/>
-          <span>NGN</span>
+              <img src={flag} alt="" className="support-item-img" />
+              <span>NGN</span>
             </div>
             <div className="support-dropdown-item">
-              
               <a href="https://api.whatsapp.com/send/07044040403">Home</a>
             </div>
             <div className="support-dropdown-item">
-             
               <a href="mailto:support@hovapay.ng">Hovapay</a>
             </div>
             <div className="support-dropdown-item">
-             
               <a href="mailto:support@hovapay.ng">Hovasms</a>
             </div>
           </div>
@@ -76,12 +75,57 @@ function Navbar() {
         <li className="help">Help</li>
         <li className="manage">Manage My Booking</li>
         <div className="btn-container">
-            <button className="login">Login</button>
-            <button className="register">Register</button>
+          <button className="login">Login</button>
+          <button className="register">Register</button>
         </div>
         <li className="hamburger-menu">
-          <img src={menuBtn} alt="" />
+          <img src={menuBtn} alt="" onClick={() => setOpenMenu(true)} />
         </li>
+        {openMenu && (
+          <div className="menu">
+            <img
+              src={closeBtn}
+              alt=""
+              onClick={() => setOpenMenu(false)}
+              className="close-btn"
+            />
+            <ul className="m-nav__container">
+              <li className="m-nav-items">Flights</li>
+              <li className="m-nav-items">Hotels</li>
+              <li className="m-nav-items">Bill Payment</li>
+              <li className="more-dropdown">
+                <Link to="">More</Link>
+                <img src={dp} alt="" className="" />
+                <div className="support-dropdown-content">
+                  <div className="support-dropdown-item m-nav-flex">
+                    <img src={flag} alt="" className="support-item-img" />
+                    <span>NGN</span>
+                  </div>
+                  <div className="support-dropdown-item">
+                    <a href="https://api.whatsapp.com/send/07044040403">Home</a>
+                  </div>
+                  <div className="support-dropdown-item">
+                    <a href="mailto:support@hovapay.ng">Hovapay</a>
+                  </div>
+                  <div className="support-dropdown-item">
+                    <a href="mailto:support@hovapay.ng">Hovasms</a>
+                  </div>
+                </div>
+              </li>
+              <li className="m-nav-items">
+                <div className="m-nav-flex">
+                  <p>Currency</p>
+                  <img src={flag} alt="" />
+                </div>
+              </li>
+              <li>Manage Booking</li>
+              <div className="btn-container">
+                <button className="login">Login</button>
+                <button className="register">Register</button>
+              </div>
+            </ul>
+          </div>
+        )}
       </ul>
     </div>
   );

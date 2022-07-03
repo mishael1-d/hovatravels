@@ -4,12 +4,25 @@ import bestvalue from "../../../assets/icons/bestvalue.png";
 import "./FlightInputField.css";
 import BasicSelect from "../Dropdown/Dropdowns";
 
-export default function InputField({ suggestions, activeTab }) {
+export default function InputField({ suggestions, toSuggestions, activeTab }) {
+  //State for from where
+  //==================================================================
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
   const [activeSuggestionIndex, setActiveSuggestionIndex] = useState(0);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [input, setInput] = useState("");
 
+  //State for to where
+  //==================================================================
+  const [filteredToSuggestions, setFilteredToSuggestions] = useState([]);
+  const [activeToSuggestionIndex, setActiveToSuggestionIndex] = useState(0);
+  const [showToSuggestions, setShowToSuggestions] = useState(false);
+  const [toinput, setToInput] = useState("");
+
+  //State for switch
+  const [switchSides, setSwitchSides] = useState(false);
+  // Functionality for from suggestion
+  //===================================================================
   const onChange = (e) => {
     const userInput = e.target.value;
 
@@ -32,6 +45,38 @@ export default function InputField({ suggestions, activeTab }) {
     setShowSuggestions(false);
   };
 
+  // Functionality for to suggestion
+  //====================================================================
+  const onToChange = (e) => {
+    const userInput = e.target.value;
+
+    // Filter our suggestions that don't contain the user's input
+    const unLinked = toSuggestions.filter(
+      (toSuggestion) =>
+        toSuggestion.toLowerCase().indexOf(userInput.toLowerCase()) > -1
+    );
+
+    setToInput(e.target.value);
+    setFilteredToSuggestions(unLinked);
+    setActiveToSuggestionIndex(0);
+    setShowToSuggestions(true);
+  };
+
+  const onToClick = (e) => {
+    setFilteredToSuggestions([]);
+    setToInput(e.target.innerText);
+    setActiveToSuggestionIndex(0);
+    setShowToSuggestions(false);
+  };
+
+  //Functionality to switch sides
+  //======================================================================
+  const switchFields = () => {
+    setSwitchSides(!switchSides);
+  };
+
+  //Dropdown component for from input fiels
+  //====================================================================
   const SuggestionsListComponent = () => {
     return filteredSuggestions.length ? (
       <ul class="suggestions">
@@ -55,10 +100,35 @@ export default function InputField({ suggestions, activeTab }) {
     );
   };
 
+  //Dropdown component for to input fiels
+  //====================================================================
+  const ToSuggestionsListComponent = () => {
+    return filteredToSuggestions.length ? (
+      <ul class="suggestions">
+        {filteredToSuggestions.map((suggestion, index) => {
+          let className;
+          // Flag the active suggestion with a class
+          if (index === activeToSuggestionIndex) {
+            className = "suggestion-active";
+          }
+          return (
+            <li className={className} key={suggestion} onClick={onToClick}>
+              {suggestion}
+            </li>
+          );
+        })}
+      </ul>
+    ) : (
+      <div class="no-suggestions">
+        <em>No suggestions, you're on your own!</em>
+      </div>
+    );
+  };
+
   return (
     <div className="inputField__container">
       <div className="flightSearchInput__container">
-        {window.innerWidth <= "1200" &&<ToggleSwitch />}
+        {window.innerWidth <= "1200" && <ToggleSwitch />}
         <div className="inputField__container-top">
           <div className="inputContainer">
             <label htmlFor="from" className="input-label">
@@ -69,17 +139,23 @@ export default function InputField({ suggestions, activeTab }) {
               id="from"
               placeholder="City or Airport"
               onChange={onChange}
-              value={input}
+              value={switchSides ? input : toinput}
             />
-            <img src={switchBtn} alt="" />
+            <img src={switchBtn} alt="" onClick={switchFields} />
             {showSuggestions && input && <SuggestionsListComponent />}
           </div>
           <div className="inputContainer">
             <label htmlFor="from" className="input-label">
               To Where ?
             </label>
-            <input type="text" id="from" placeholder="City or Airport" />
-            {showSuggestions && input && <SuggestionsListComponent />}
+            <input
+              type="text"
+              id="from"
+              placeholder="City or Airport"
+              onChange={onToChange}
+              value={!switchSides ? input : toinput}
+            />
+            {showToSuggestions && toinput && <ToSuggestionsListComponent />}
           </div>
         </div>
         <div className="inputField__container-middle">
@@ -116,7 +192,7 @@ export default function InputField({ suggestions, activeTab }) {
       </div>
       <div className="v-divider" />
       <div className="input-buttons__container">
-      {window.innerWidth > "1200" &&<ToggleSwitch />}
+        {window.innerWidth > "1200" && <ToggleSwitch />}
         <BasicSelect activeTab={activeTab} />
         <button className="search-btn">Search Flights</button>
       </div>
@@ -125,17 +201,17 @@ export default function InputField({ suggestions, activeTab }) {
 }
 
 export const ToggleSwitch = () => {
-  const [toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState(false);
   const handleSwitchChange = () => {
-    setToggle(!toggle)
-  }
+    setToggle(!toggle);
+  };
   return (
     <div className="switch-container">
       <h5>Trip Type</h5>
       <div className="toggle-switch">
         <div className="switch-btn" onClick={handleSwitchChange}>
-          <p className={!toggle ?"active-switch":""}>ROUND TRIP</p>
-          <p className={toggle ?"active-switch":""}>1 WAY</p>
+          <p className={!toggle ? "active-switch" : ""}>ROUND TRIP</p>
+          <p className={toggle ? "active-switch" : ""}>1 WAY</p>
         </div>
       </div>
     </div>
