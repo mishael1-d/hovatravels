@@ -39,7 +39,16 @@ export const FirstTab = ({ activeTab }) => {
 export const SecondTab = ({ activeTab }) => {
   return (
     <div className="secondTab">
-      <HotelInputField activeTab={activeTab} />
+      <HotelInputField activeTab={activeTab} 
+      suggestions={[
+        "Transcorp Hotel, Abu Dhabi, Dubai",
+        "Jumeirah Hotels and Resort",
+        "Ibis London City - Shoreditch",
+        "The Ritz-Carlton Hotel, Toronto, Canada",
+        "Premier Inn London Croydon Town Centre Hotel, London",
+        "Four Seasons Hotel, Toronto, Canada"
+      ]}
+      />
     </div>
   );
 };

@@ -1,7 +1,8 @@
 .navbar__container {
-  position: sticky;
+    position: sticky;
   top: 0;
   z-index: 10000;
+  transition: all 2ads ease;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -155,9 +156,10 @@
     background-color: #fff;
     color: #111;
     text-align: right;
-    width: 100%;
+    width: 70%;
     height: 100vh;
     padding: 2rem;
+    overflow-y: auto;
   }
   .m-nav__container {
     display: flex;
@@ -171,6 +173,10 @@
     margin-bottom: 1.5rem;
     font-size: 14px;
     width: 100%;
+    cursor: pointer;
+  }
+  .m-nav__container li:hover {
+    color: #0e3c6e;
   }
   .m-nav-flex {
     display: flex;
@@ -183,8 +189,10 @@
   }
 
   .close-btn {
-    padding: 1rem;
-    width: 15%;
+    padding: .5rem;
+    width: 13%;
+    object-fit: contain;
+    cursor: pointer;
   }
 
   .logo__container {
