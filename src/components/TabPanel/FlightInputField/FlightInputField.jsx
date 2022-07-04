@@ -72,7 +72,9 @@ export default function InputField({ suggestions, toSuggestions, activeTab }) {
   //Functionality to switch sides
   //======================================================================
   const switchFields = () => {
-    setSwitchSides(!switchSides);
+    if (input.length > 1) {
+      setSwitchSides(!switchSides);
+    }
   };
 
   //Dropdown component for from input fiels
@@ -95,7 +97,7 @@ export default function InputField({ suggestions, toSuggestions, activeTab }) {
       </ul>
     ) : (
       <div class="no-suggestions">
-        <em>No suggestions, you're on your own!</em>
+        <p>No suggestions!</p>
       </div>
     );
   };
@@ -120,7 +122,7 @@ export default function InputField({ suggestions, toSuggestions, activeTab }) {
       </ul>
     ) : (
       <div class="no-suggestions">
-        <em>No suggestions, you're on your own!</em>
+        <p>No suggestions!</p>
       </div>
     );
   };

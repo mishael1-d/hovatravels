@@ -212,7 +212,7 @@
 
 .no-suggestions {
   background: #fff;
-  color: #111;
+  color: red;
   padding: 0.5rem;
 }
 .suggestions {

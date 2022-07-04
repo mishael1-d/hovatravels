@@ -7,8 +7,8 @@ export default function BasicSelect({ activeTab }) {
   const [showPassengerDropdown, setShowPassengerDropdown] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
   const [adult, setAdult] = useState(1);
-  const [children, setChildren] = useState(1);
-  const [infant, setInfant] = useState(1);
+  const [children, setChildren] = useState(0);
+  const [infant, setInfant] = useState(0);
   const [count, setCount] = useState(adult + children + infant);
 
   const handleIncrement = () => {

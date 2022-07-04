@@ -106,8 +106,7 @@ function Navbar() {
                 </div>
                 <div className="support-dropdown-content">
                   <div className="support-dropdown-item m-nav-flex">
-                    <img src={flag} alt="" className="support-item-img" />
-                    <span>NGN</span>
+                    <p>Naira</p>
                   </div>
                   <div className="support-dropdown-item">
                     <a href="https://api.whatsapp.com/send/07044040403">Home</a>
@@ -122,8 +121,14 @@ function Navbar() {
               </li>
               <li className="m-nav-items" onClick={() => setOpenMenu(false)}>
                 <div className="m-nav-flex">
-                  <p>Currency</p>
+                  <p>Country</p>
                   <img src={flag} alt="" />
+                </div>
+              </li>
+              <li className="m-nav-items" onClick={() => setOpenMenu(false)}>
+                <div className="m-nav-flex">
+                  <p>Currency</p>
+                  <p>NGN</p>
                 </div>
               </li>
               <li onClick={() => setOpenMenu(false)}>Manage Booking</li>
