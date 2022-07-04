@@ -202,7 +202,7 @@
 }
 
 .active-switch {
-  transition: all .5s ease;
+  transition: background 1s, color 0.5s 0.1s;
   width: fit-content;
   background: #fff;
   color: #f07100;
