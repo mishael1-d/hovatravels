@@ -139,7 +139,7 @@ export default function InputField({ suggestions, toSuggestions, activeTab }) {
               id="from"
               placeholder="City or Airport"
               onChange={onChange}
-              value={switchSides ? input : toinput}
+              value={!switchSides ? input : toinput}
             />
             <img src={switchBtn} alt="" onClick={switchFields} />
             {showSuggestions && input && <SuggestionsListComponent />}
@@ -153,7 +153,7 @@ export default function InputField({ suggestions, toSuggestions, activeTab }) {
               id="from"
               placeholder="City or Airport"
               onChange={onToChange}
-              value={!switchSides ? input : toinput}
+              value={switchSides ? input : toinput}
             />
             {showToSuggestions && toinput && <ToSuggestionsListComponent />}
           </div>

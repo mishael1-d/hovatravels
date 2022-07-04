@@ -90,12 +90,20 @@ function Navbar() {
               className="close-btn"
             />
             <ul className="m-nav__container">
-              <li className="m-nav-items">Flights</li>
-              <li className="m-nav-items">Hotels</li>
-              <li className="m-nav-items">Bill Payment</li>
+              <li className="m-nav-items" onClick={() => setOpenMenu(false)}>
+                Flights
+              </li>
+              <li className="m-nav-items" onClick={() => setOpenMenu(false)}>
+                Hotels
+              </li>
+              <li className="m-nav-items" onClick={() => setOpenMenu(false)}>
+                Bill Payment
+              </li>
               <li className="more-dropdown">
-                <Link to="">More</Link>
-                <img src={dp} alt="" className="" />
+                <div className="m-nav-flex">
+                  <Link to="">More</Link>
+                  <img src={dp} alt="" className="" />
+                </div>
                 <div className="support-dropdown-content">
                   <div className="support-dropdown-item m-nav-flex">
                     <img src={flag} alt="" className="support-item-img" />
@@ -112,13 +120,13 @@ function Navbar() {
                   </div>
                 </div>
               </li>
-              <li className="m-nav-items">
+              <li className="m-nav-items" onClick={() => setOpenMenu(false)}>
                 <div className="m-nav-flex">
                   <p>Currency</p>
                   <img src={flag} alt="" />
                 </div>
               </li>
-              <li>Manage Booking</li>
+              <li onClick={() => setOpenMenu(false)}>Manage Booking</li>
               <div className="btn-container">
                 <button className="login">Login</button>
                 <button className="register">Register</button>

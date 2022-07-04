@@ -156,7 +156,7 @@
         width: 100%;
         height: 100vh;
         padding: 2rem;
-    }
+}
     .m-nav__container {
         display: flex;
         flex-direction: column;
@@ -176,6 +176,10 @@
         align-items: center;
     }
 
+    .menu .m-nav__container .support-dropdown-content {
+        position: relative;
+    }
+
     .close-btn {
         padding: 1rem;
         width: 15%;
@@ -184,6 +188,15 @@
     .logo__container {
        margin: 0;
        width: 30%;
+    }
+
+    .menu .m-nav__container .btn-container {
+        display: block;
+        width: 100%;
+    }
+    .menu .m-nav__container .btn-container button {
+        width: 100%;
+        margin-bottom: 1rem;
     }
 }
 
