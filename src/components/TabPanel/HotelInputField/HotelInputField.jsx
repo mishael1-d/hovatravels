@@ -1,4 +1,4 @@
-import React, {useState, useContext} from "react";
+import React, { useContext} from "react";
 import bestvalue from "../../../assets/icons/bestvalue.png";
 import "./HotelInputField.css";
 import BasicSelect from "../Dropdown/Dropdowns";

@@ -100,7 +100,7 @@
 }
 .location-overlay__content .body h5,
 .paynow-overlay__content h5 {
-  font-size: 24px;
+  font-size: 1.2rem;
   /* margin-bottom: 0.6rem; */
 }
 .location-overlay__content .location {
@@ -151,10 +151,8 @@
 .pay-discount {
   width: 50%;
   height: 100%;
-}
-.pay-discount .body {
   background: linear-gradient(180deg, #f17608 0%, #ee8d39 100%);
-  padding: 5px 10px;
+  padding: 11.5px;
 }
 .pay-discount .body p,
 .pay-discount .body h5 {
