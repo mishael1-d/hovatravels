@@ -1,8 +1,9 @@
-import * as React from "react";
+import React, {useContext} from "react";
 import flightIcon from "../../assets/icons/flight.png";
 import hotelIcon from "../../assets/icons/hotel.png";
 import InputField from "./FlightInputField/FlightInputField";
 import HotelInputField from "./HotelInputField/HotelInputField";
+import { AppContext } from "../../App";
 import "./TabPanel.css";
 
 export const FirstTab = ({ activeTab }) => {
@@ -54,7 +55,7 @@ export const SecondTab = ({ activeTab }) => {
 };
 
 function TabPanel() {
-  const [activeTab, setActiveTab] = React.useState("tab1");
+  const {activeTab, setActiveTab} = useContext(AppContext)
 
   const handleTab1 = () => {
     setActiveTab("tab1");

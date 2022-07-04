@@ -1,15 +1,24 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import Select from "react-select";
+import { AppContext } from "../../../App";
 import dropdown from "../../../assets/icons/drop.png";
 import "./Dropdowns.css";
 
 export default function BasicSelect({ activeTab }) {
-  const [showPassengerDropdown, setShowPassengerDropdown] = useState(false);
-  const [showDropdown, setShowDropdown] = useState(false);
-  const [adult, setAdult] = useState(1);
-  const [children, setChildren] = useState(0);
-  const [infant, setInfant] = useState(0);
-  const [count, setCount] = useState(adult + children + infant);
+  const {
+    showPassengerDropdown,
+    setShowPassengerDropdown,
+    showDropdown,
+    setShowDropdown,
+    adult,
+    setAdult,
+    children,
+    setChildren,
+    infant,
+    setInfant,
+    count,
+    setCount,
+  } = useContext(AppContext);
 
   const handleIncrement = () => {
     setAdult((adult) => adult + 1);
@@ -145,7 +154,7 @@ export const Passenger = ({
   adult,
   children,
   infant,
-  setShowPassengerDropdown
+  setShowPassengerDropdown,
 }) => {
   return (
     <div
@@ -236,7 +245,9 @@ export const Passenger = ({
           </button>
         </div>
       </div>
-      <button className="done" onClick={()=>setShowPassengerDropdown(false)}>Done</button>
+      <button className="done" onClick={() => setShowPassengerDropdown(false)}>
+        Done
+      </button>
     </div>
   );
 };

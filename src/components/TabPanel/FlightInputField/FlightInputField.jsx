@@ -1,26 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import switchBtn from "../../../assets/icons/switch-btn.png";
 import bestvalue from "../../../assets/icons/bestvalue.png";
 import "./FlightInputField.css";
 import BasicSelect from "../Dropdown/Dropdowns";
+import { AppContext } from "../../../App";
 
 export default function InputField({ suggestions, toSuggestions, activeTab }) {
-  //State for from where
-  //==================================================================
-  const [filteredSuggestions, setFilteredSuggestions] = useState([]);
-  const [activeSuggestionIndex, setActiveSuggestionIndex] = useState(0);
-  const [showSuggestions, setShowSuggestions] = useState(false);
-  const [input, setInput] = useState("");
-
-  //State for to where
-  //==================================================================
-  const [filteredToSuggestions, setFilteredToSuggestions] = useState([]);
-  const [activeToSuggestionIndex, setActiveToSuggestionIndex] = useState(0);
-  const [showToSuggestions, setShowToSuggestions] = useState(false);
-  const [toinput, setToInput] = useState("");
-
-  //State for switch
-  const [switchSides, setSwitchSides] = useState(false);
+ const {
+  filteredSuggestions,
+  setFilteredSuggestions,
+  activeSuggestionIndex,
+  setActiveSuggestionIndex,
+  showSuggestions,
+  setShowSuggestions,
+  input,
+  setInput,
+  filteredToSuggestions,
+  setFilteredToSuggestions,
+  activeToSuggestionIndex,
+  setActiveToSuggestionIndex,
+  showToSuggestions,
+  setShowToSuggestions,
+  toinput,
+  setToInput,
+  switchSides,
+  setSwitchSides
+} = useContext(AppContext)
   // Functionality for from suggestion
   //===================================================================
   const onChange = (e) => {

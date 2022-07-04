@@ -1,13 +1,20 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import bestvalue from "../../../assets/icons/bestvalue.png";
 import "./HotelInputField.css";
 import BasicSelect from "../Dropdown/Dropdowns";
+import { AppContext } from "../../../App";
 
 function HotelInputField({ activeTab, suggestions }) {
-  const [filteredSuggestions, setFilteredSuggestions] = useState([]);
-  const [activeSuggestionIndex, setActiveSuggestionIndex] = useState(0);
-  const [showSuggestions, setShowSuggestions] = useState(false);
-  const [input, setInput] = useState("");
+  const {
+    filteredSuggestions,
+    setFilteredSuggestions,
+    activeSuggestionIndex,
+    setActiveSuggestionIndex,
+    showSuggestions,
+    setShowSuggestions,
+    input,
+    setInput
+  } = useContext(AppContext)
 
   const onChange = (e) => {
     const userInput = e.target.value;
