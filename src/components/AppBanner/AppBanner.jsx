@@ -1,5 +1,5 @@
 import React from "react";
-import appBanner from "../../assets/bg/app-download.png";
+import appBanner from "../../assets/bg/app.png";
 import IOS from '../../assets/icons/IOS-image.png'
 import Andriod from '../../assets/icons/Play-store.png'
 import qr from '../../assets/icons/app-qr.svg'
